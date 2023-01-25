@@ -10,12 +10,17 @@ import {
 } from 'naive-ui'
 import type { GlobalTheme } from 'naive-ui'
 const theme = ref<GlobalTheme | null>(null)
-theme.value = darkTheme
 const collapsed = ref(false)
+const main = ref<HTMLDivElement | null>(null)
+const themeInfo = ref('浅色')
+const toggleTheme = () => {
+  theme.value = (theme.value === null) ? darkTheme : null
+  themeInfo.value = (theme.value === null) ? '浅色' : '深色'
+}
 </script>
 
 <template>
-  <main class="h-screen relative">
+  <main ref="main" class="h-screen relative">
     <NConfigProvider :theme="theme">
       <NLayout has-sider position="absolute">
         <NLayoutSider
@@ -31,8 +36,9 @@ const collapsed = ref(false)
         </NLayoutSider>
         <NLayout>
           <NLayoutHeader bordered style="height:64px">
-            <nav class="h-full flex items-center p-1">
-              <Header />
+            <nav class="h-full flex items-center justify-end pr-5 p-1">
+              <Github />
+              <toggleDarkTheme :theme-info="themeInfo" @click="toggleTheme" />
             </nav>
           </NLayoutHeader>
           <NLayoutContent :native-scrollbar="false" position="absolute" style="top:64px">
