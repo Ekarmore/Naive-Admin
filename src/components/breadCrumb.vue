@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import { NBreadcrumb, NBreadcrumbItem } from 'naive-ui'
-const props = defineProps({
-  routeInfo: String,
-})
+const route = useRoute()
 </script>
 
 <template>
   <NBreadcrumb>
     <NBreadcrumbItem>
-      {{ props.routeInfo }}
+      {{ route.name }}
     </NBreadcrumbItem>
   </NBreadcrumb>
 </template>
