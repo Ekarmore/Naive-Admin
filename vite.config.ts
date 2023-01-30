@@ -39,6 +39,28 @@ export default defineConfig({
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
       extensions: ['vue', 'md'],
+      extendRoute(route) {
+        if (route.path === '/') {
+          return {
+            ...route,
+            // path: '/login',
+            component: '/src/pages/login.vue',
+          }
+        }
+      },
+      onRoutesGenerated(routes) {
+        const temp_routes = JSON.parse(JSON.stringify(routes))
+        temp_routes.forEach((item: any) => {
+          // 这里依然是判断一下路由中包含了fruit字符串的，更换layout
+          if (item.path.includes('login')) {
+            console.log(item)
+            item.meta = {
+              layout: 'home',
+            }
+          }
+        })
+        return temp_routes
+      },
     }),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
