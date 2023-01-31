@@ -9,7 +9,6 @@ const screenState = computed(() => {
 </script>
 
 <template>
-  <!-- <i class="i-carbon-fit-to-screen mr-2 text-lg opacity-80 hover:opacity-100 transition-all cursor-pointer duration-100" /> -->
   <NButton secondary>
     {{ screenState }}
   </NButton>
