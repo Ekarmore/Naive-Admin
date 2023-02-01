@@ -44,22 +44,10 @@ export default defineConfig({
           return {
             ...route,
             // path: '/login',
-            component: '/src/pages/login.vue',
+            // component: '/src/pages/login.vue',
+            redirect: '/workbench',
           }
         }
-      },
-      onRoutesGenerated(routes) {
-        const temp_routes = JSON.parse(JSON.stringify(routes))
-        temp_routes.forEach((item: any) => {
-          // 这里依然是判断一下路由中包含了fruit字符串的，更换layout
-          if (item.path.includes('login')) {
-            console.log(item)
-            item.meta = {
-              layout: 'home',
-            }
-          }
-        })
-        return temp_routes
       },
     }),
 

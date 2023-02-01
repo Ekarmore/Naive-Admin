@@ -6,7 +6,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <NButton secondary class="w-14">
+  <NButton quaternary class="w-14">
     {{ props.themeInfo }}
   </NButton>
 </template>

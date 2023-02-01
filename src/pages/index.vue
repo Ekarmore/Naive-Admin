@@ -1,14 +1,13 @@
-<script setup lang="ts">
-import { NButton } from 'naive-ui'
+<script lang="ts" setup>
 </script>
 
 <template>
   <div>
-    <NButton>2</NButton>
+    hi
   </div>
 </template>
 
 <route lang="yaml">
 meta:
-  layout: home
+  layout: login
 </route>

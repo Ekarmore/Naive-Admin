@@ -1,4 +1,4 @@
-.prose pre:not(.shiki) {
+/* .prose pre:not(.shiki) {
   padding: 0;
 }
 
@@ -25,4 +25,4 @@ html.dark .shiki-light {
 
 html:not(.dark) .shiki-dark {
   display: none;
-}
+} */

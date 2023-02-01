@@ -9,7 +9,7 @@ const screenState = computed(() => {
 </script>
 
 <template>
-  <NButton secondary>
+  <NButton quaternary>
     {{ screenState }}
   </NButton>
 </template>
