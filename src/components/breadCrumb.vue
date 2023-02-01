@@ -12,7 +12,7 @@ const List = computed(() => {
 
 <template>
   <NBreadcrumb>
-    <NBreadcrumbItem v-for="item in pathList">
+    <NBreadcrumbItem v-for="item in pathList" :key="item">
       {{ item }}
     </NBreadcrumbItem>
   </NBreadcrumb>
