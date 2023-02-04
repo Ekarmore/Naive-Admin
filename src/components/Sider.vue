@@ -41,15 +41,14 @@ const menuOptions: MenuOption[] = [
         { default: () => '链接' },
       ),
     key: 'link',
+    class: 'i-carbon-logo-github',
   },
   {
     label: () =>
       h(
         RouterLink,
         {
-          to: {
-            name: 'Nested',
-          },
+          to: '/nested',
         },
         { default: () => '嵌套菜单' },
       ),
@@ -59,7 +58,7 @@ const menuOptions: MenuOption[] = [
           h(
             RouterLink,
             {
-              to: '/nested/One',
+              to: '/nested/one',
 
             },
             { default: () => 'One' },
@@ -71,8 +70,7 @@ const menuOptions: MenuOption[] = [
               h(
                 RouterLink,
                 {
-                  to: '/nested/One/Two',
-
+                  to: '/nested/one/two',
                 },
                 { default: () => 'Two' },
               ),
@@ -93,6 +91,17 @@ const menuOptions: MenuOption[] = [
         key: 'uno-css',
       },
     ],
+  },
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: '/404',
+        },
+        { default: () => '404' },
+      ),
+    key: '404',
   },
 ]
 const activeKey = ref<string | null>(null)
