@@ -10,3 +10,8 @@ import { NCard } from 'naive-ui'
     </NCard>
   </section>
 </template>
+
+<route lang="yaml">
+meta:
+  {title: 外部链接}
+  </route>
