@@ -7,5 +7,5 @@
 
 <route lang="yaml">
 meta:
-  layout: default
+  {title: 工作台}
 </route>

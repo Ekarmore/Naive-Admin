@@ -3,8 +3,8 @@ import { NCard, NSpace } from 'naive-ui'
 </script>
 
 <template>
-  <main>
-    <div class="w-full flex justify-center p-5">
+  <main class="p-10">
+    <div class="w-full flex justify-center">
       <NCard
         embedded
         :segmented="{
@@ -22,7 +22,7 @@ import { NCard, NSpace } from 'naive-ui'
         </NSpace>
       </NCard>
     </div>
-    <div class="w-full flex justify-center p-5">
+    <div class="w-full flex justify-center">
       <NCard
         embedded
         size="large" vertical title="Tool" :segmented="{

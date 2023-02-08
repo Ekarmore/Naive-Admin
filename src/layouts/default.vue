@@ -31,14 +31,17 @@ const {
         </NLayoutSider>
         <NLayout>
           <NLayoutHeader bordered style="height:64px">
-            <nav class="pr-3 pl-3 h-full grid grid-cols-12 place-content-center">
-              <toggleCollapsed />
-              <div class="flex justify-center items-center col-start-11">
-                <Github class="m-1" />
-                <ToggleScreen class="m-1" />
-                <toggleDarkTheme class="m-1" />
-                <userInfo class="m-1" />
+            <nav class="pr-3 pl-3 h-full flex relative">
+              <div class="flex items-center justify-center">
+                <toggleCollapsed />
               </div>
+              <div class="md:flex h-full items-center justify-between absolute right-5 hidden">
+                <Github />
+                <ToggleScreen />
+                <toggleDarkTheme />
+                <userInfo />
+              </div>
+              <dragMenu class="md:hidden h-full items-center justify-between absolute right-5 flex" />
             </nav>
           </NLayoutHeader>
           <NLayoutContent :native-scrollbar="false" position="absolute" style="top:64px">

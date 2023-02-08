@@ -13,7 +13,9 @@ const screenState = computed(() => {
 </script>
 
 <template>
-  <NButton quaternary @click="fullScreen">
-    {{ screenState }}
-  </NButton>
+  <div class="m-1">
+    <NButton quaternary @click="fullScreen">
+      {{ screenState }}
+    </NButton>
+  </div>
 </template>

@@ -8,7 +8,9 @@ const {
 </script>
 
 <template>
-  <NButton quaternary class="w-14" @click="store.toggleTheme">
-    {{ themeInfo }}
-  </NButton>
+  <div class="m-1">
+    <NButton quaternary class="w-14" @click="store.toggleTheme">
+      {{ themeInfo }}
+    </NButton>
+  </div>
 </template>
