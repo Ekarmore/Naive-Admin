@@ -30,21 +30,26 @@ const {
           <Sider />
         </NLayoutSider>
         <NLayout>
-          <NLayoutHeader bordered style="height:64px">
-            <nav class="pr-3 pl-3 h-full flex relative">
-              <div class="flex items-center justify-center">
-                <toggleCollapsed />
+          <NLayoutHeader bordered style="height:90px">
+            <nav class=" h-full flex flex-col relative">
+              <div class="flex items-center h-45 border-b">
+                <div class="flex items-center justify-center">
+                  <toggleCollapsed />
+                </div>
+                <div class="md:flex h-full items-center justify-between absolute right-5 hidden">
+                  <Github />
+                  <ToggleScreen />
+                  <toggleDarkTheme />
+                  <userInfo />
+                </div>
+                <dragMenu class="md:hidden h-full items-center justify-between absolute right-5 flex" />
               </div>
-              <div class="md:flex h-full items-center justify-between absolute right-5 hidden">
-                <Github />
-                <ToggleScreen />
-                <toggleDarkTheme />
-                <userInfo />
+              <div class=" h-45 flex items-center">
+                <Tag />
               </div>
-              <dragMenu class="md:hidden h-full items-center justify-between absolute right-5 flex" />
             </nav>
           </NLayoutHeader>
-          <NLayoutContent :native-scrollbar="false" position="absolute" style="top:64px">
+          <NLayoutContent :native-scrollbar="false" position="absolute" style="top:90px">
             <div>
               <router-view v-slot="{ Component }">
                 <transition name="globalAnimate">
