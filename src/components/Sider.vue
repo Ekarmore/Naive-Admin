@@ -2,6 +2,7 @@
 import { NMenu } from 'naive-ui'
 import type { MenuOption } from 'naive-ui'
 import { RouterLink } from 'vue-router'
+
 const menuOptions: MenuOption[] = [
   {
     label: () =>
@@ -15,6 +16,7 @@ const menuOptions: MenuOption[] = [
         { default: () => '工作台' },
       ),
     key: 'work-table',
+    icon: useRenderIcon('i-carbon-dashboard'),
   },
   {
     label: () =>
@@ -28,6 +30,7 @@ const menuOptions: MenuOption[] = [
         { default: () => '组件' },
       ),
     key: 'components',
+    icon: useRenderIcon('i-carbon-logo-github'),
   },
   {
     label: () =>
@@ -41,7 +44,7 @@ const menuOptions: MenuOption[] = [
         { default: () => '链接' },
       ),
     key: 'link',
-    class: 'i-carbon-logo-github',
+    icon: useRenderIcon('i-carbon-logo-github'),
   },
   {
     label: () =>
@@ -52,6 +55,7 @@ const menuOptions: MenuOption[] = [
         },
         { default: () => '嵌套菜单' },
       ),
+    icon: useRenderIcon('i-carbon-logo-github'),
     children: [
       {
         label: () =>
@@ -64,6 +68,7 @@ const menuOptions: MenuOption[] = [
             { default: () => 'One' },
           ),
         key: 'n-1',
+        icon: useRenderIcon('i-carbon-logo-github'),
         children: [
           {
             label: () =>
@@ -75,11 +80,13 @@ const menuOptions: MenuOption[] = [
                 { default: () => 'Two' },
               ),
             key: 'n-2',
+            icon: useRenderIcon('i-carbon-logo-github'),
           },
         ],
       },
     ],
     key: 'nesting-route',
+
   },
   {
     label: '页面',
@@ -114,8 +121,14 @@ const activeKey = ref<string | null>(null)
   <NMenu
     v-model:value="activeKey"
     class="mt-10"
-    :collapsed-width="64"
-    :collapsed-icon-size="22"
+    :collapsed-width="48"
+    :icon-size="22"
+    :collapsed-icon-size="28"
     :options="menuOptions"
+    :indent="18"
   />
 </template>
+
+<style>
+
+</style>
